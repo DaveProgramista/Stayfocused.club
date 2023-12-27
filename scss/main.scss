@@ -19,6 +19,9 @@ body {
 }
 
 /*---------- Navigation --------*/
+
+///mobile navigation 
+
 .burger-btn {
 	position: fixed;
 	top: 55px;
@@ -104,6 +107,7 @@ body {
 	animation: navItemsAnimation 1s both;
 }
 
+///desktop navigation 
 
 .nav{
     position: sticky;
@@ -245,6 +249,18 @@ body {
         }
     }
 
+
+ /*---------- footer --------*/
+ footer{
+    text-align: center;
+    height: 50px;
+    width: 100vw;
+    background-color: $main-color;
+    .footer__bottom-text{
+        color: $pure-white;
+        padding-top: 15px;
+    }
+ }
 
 //=========================
 // MEDIA

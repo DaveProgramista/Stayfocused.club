@@ -240,6 +240,18 @@ body {
   flex-direction: row-reverse;
 }
 
+/*---------- footer --------*/
+footer {
+  text-align: center;
+  height: 50px;
+  width: 100vw;
+  background-color: #0f6f2a;
+}
+footer .footer__bottom-text {
+  color: #ffffff;
+  padding-top: 15px;
+}
+
 @media (min-width: 576px) {
   .burger-btn {
     display: none;
