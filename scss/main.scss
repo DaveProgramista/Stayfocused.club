@@ -7,8 +7,6 @@ html {
 body {
     font-size: 1.6rem;
     font-family: 'Red Hat Display', sans-serif;
-    background: url(../img/tlo.jpeg) center top;
-    height: 200vh;
 }
 .section__tittle{
     padding: 1em;
@@ -16,9 +14,86 @@ body {
     font-size: 4em;
     font-family: 'Lilita One', sans-serif;
 }
-
+.active{
+    left: 0;
+}
 
 /*---------- Navigation --------*/
+.burger-btn {
+	position: fixed;
+	top: 55px;
+	padding: 1em;
+	background: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 1000;
+
+	&:focus {
+		outline: none;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 8px;
+	}
+	&:hover {
+		.burger-btn__bars::after,
+		.burger-btn__bars::before {
+			width: 100%;
+		}
+	}
+
+	&__box {
+		position: relative;
+		width: 40px;
+		height: 30px;
+	}
+	&__bars,
+	&__bars::after,
+	&__bars::before {
+        position: absolute;
+        right: 0;
+        height: 3px;
+        content: '';
+        background-color: $pure-white;
+        transition: width .3s;
+	}
+	&__bars {
+		width: 100%;
+
+		&::after {
+			top: 13px;
+			width: 60%;
+		}
+		&::before {
+			top: 27px;
+			width: 30%;
+			transition-delay: 0.1s;
+		}
+	}
+}
+.burget-nav__box{
+    position: absolute;
+    top: 48px;
+    right: -1000px;
+    height: 560px;
+    width: 100vw;
+    background-color: $main-color;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    &--link{
+        text-align: center;
+        width: 100vw;
+        height: 60px;
+        padding: 1em;
+        text-decoration: none;
+        color: $pure-white;
+        font-size: 2.5em;
+    }
+
+}
+
+
 .nav{
     position: sticky;
     top: 0;
@@ -30,24 +105,15 @@ body {
         align-items: center;
         justify-content: flex-end;
         z-index: -1;
-        width: 100vw;
+        width:100vw;
         height: 50px;
         font-size: 1em;
         background-color: $main-color;
         
         &__link{
-            padding: 0 1em;
-            text-transform: uppercase;
-            text-decoration: none; 
-            color: $pure-white;
-            transition: .3s;
-            &:hover{
-                text-shadow: 0 0 10px $shadow-color;
-                color: $accent-white;
-                scale: 1.2;
-            }
-        }}
-        
+            display: none;
+        }
+    }
         .title-box{
             position: relative;
             height: 60px;
@@ -57,7 +123,7 @@ body {
             &__logo{
                 position: absolute;
                 top: 20px;
-                left: 40px;
+                left: 20px;
                 img{
                     height: 80px;
                     width: 80px;
@@ -66,11 +132,11 @@ body {
             }
             &__text{
                 position: absolute;
-                top: 10px;
-                left: 130px;
+                top: 20px;
+                left: 110px;
                 font-family: 'Lilita One', sans-serif;
                 color: $pure-white;
-                font-size: 2em;
+                font-size: 1.5em;
             }
         }
     }
@@ -78,7 +144,8 @@ body {
     .header {
         &__wrapper {
             position: relative;
-            height: 95vh;
+            height: 92vh;
+            width: 100vw;
             background-image: url('../img/hero.JPG');
             background-position: center;
             background-size: cover;
@@ -100,17 +167,17 @@ body {
             align-items: center;
             flex-direction: column;
             height: 100%;
-            padding: 10px;
+            padding: 1em;
             text-align: center;
             z-index: 5;
         }
         &__heading{
-            font-size: 6em;
+            font-size: 2em;
             font-family: 'Lilita One', sans-serif;
             color: $pure-white;
         }
         &__sentence{
-            font-size: 3em;
+            font-size: 1em;
             color: $pure-white;
         }
     }
@@ -124,6 +191,7 @@ body {
         &__wrapper{
             display: flex;
             flex-direction: column;
+            overflow: hidden;
         }
         &__heading{
             padding: 1em;
@@ -165,4 +233,37 @@ body {
             }
         }
     }
+
+
+//=========================
+// MEDIA
+//=========================
+
+@media (min-width: 576px){
+
+    //navigation
+
+    .burger-btn{
+        display: none;
+    }
+    .burget-nav__box{
+        display: none;
+    }
+    .nav{
+    .navbar{
+        &__link{
+            display: block;
+            padding: 0 .5em;
+            text-transform: uppercase;
+            text-decoration: none; 
+            color: $pure-white;
+            transition: .3s;
+            &:hover{
+                text-shadow: 0 0 10px $shadow-color;
+                color: $accent-white;
+                scale: 1.2;
+            }
+        }
+    }}
+}
     

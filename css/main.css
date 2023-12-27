@@ -14,8 +14,6 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Red Hat Display", sans-serif;
-  background: url(../img/tlo.jpeg) center top;
-  height: 200vh;
 }
 
 .section__tittle {
@@ -25,7 +23,78 @@ body {
   font-family: "Lilita One", sans-serif;
 }
 
+.active {
+  left: 0;
+}
+
 /*---------- Navigation --------*/
+.burger-btn {
+  position: fixed;
+  top: 55px;
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+.burger-btn:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+.burger-btn:hover .burger-btn__bars::after,
+.burger-btn:hover .burger-btn__bars::before {
+  width: 100%;
+}
+.burger-btn__box {
+  position: relative;
+  width: 40px;
+  height: 30px;
+}
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+  position: absolute;
+  right: 0;
+  height: 3px;
+  content: "";
+  background-color: #ffffff;
+  transition: width 0.3s;
+}
+.burger-btn__bars {
+  width: 100%;
+}
+.burger-btn__bars::after {
+  top: 13px;
+  width: 60%;
+}
+.burger-btn__bars::before {
+  top: 27px;
+  width: 30%;
+  transition-delay: 0.1s;
+}
+
+.burget-nav__box {
+  position: absolute;
+  top: 48px;
+  right: -1000px;
+  height: 560px;
+  width: 100vw;
+  background-color: #0f6f2a;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+.burget-nav__box--link {
+  text-align: center;
+  width: 100vw;
+  height: 60px;
+  padding: 1em;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2.5em;
+}
+
 .nav {
   position: sticky;
   top: 0;
@@ -44,16 +113,7 @@ body {
   background-color: #0f6f2a;
 }
 .nav .navbar__link {
-  padding: 0 1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  transition: 0.3s;
-}
-.nav .navbar__link:hover {
-  text-shadow: 0 0 10px rgb(15, 15, 15);
-  color: #d8d6d6;
-  scale: 1.2;
+  display: none;
 }
 .nav .title-box {
   position: relative;
@@ -65,7 +125,7 @@ body {
 .nav .title-box__logo {
   position: absolute;
   top: 20px;
-  left: 40px;
+  left: 20px;
 }
 .nav .title-box__logo img {
   height: 80px;
@@ -74,17 +134,18 @@ body {
 }
 .nav .title-box__text {
   position: absolute;
-  top: 10px;
-  left: 130px;
+  top: 20px;
+  left: 110px;
   font-family: "Lilita One", sans-serif;
   color: #ffffff;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 /*---------- Header --------*/
 .header__wrapper {
   position: relative;
-  height: 95vh;
+  height: 92vh;
+  width: 100vw;
   background-image: url("../img/hero.JPG");
   background-position: center;
   background-size: cover;
@@ -104,17 +165,17 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100%;
-  padding: 10px;
+  padding: 1em;
   text-align: center;
   z-index: 5;
 }
 .header__heading {
-  font-size: 6em;
+  font-size: 2em;
   font-family: "Lilita One", sans-serif;
   color: #ffffff;
 }
 .header__sentence {
-  font-size: 3em;
+  font-size: 1em;
   color: #ffffff;
 }
 
@@ -127,6 +188,7 @@ body {
 .aboutus__wrapper {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .aboutus__heading {
   padding: 1em;
@@ -164,4 +226,26 @@ body {
 }
 .aboutus__card--two, .aboutus__card--four {
   flex-direction: row-reverse;
+}
+
+@media (min-width: 576px) {
+  .burger-btn {
+    display: none;
+  }
+  .burget-nav__box {
+    display: none;
+  }
+  .nav .navbar__link {
+    display: block;
+    padding: 0 0.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.3s;
+  }
+  .nav .navbar__link:hover {
+    text-shadow: 0 0 10px rgb(15, 15, 15);
+    color: #d8d6d6;
+    scale: 1.2;
+  }
 }/*# sourceMappingURL=main.css.map */
