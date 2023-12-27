@@ -12,8 +12,29 @@ const handleNav = () => {
 			burgerNav.classList.remove('active');
 		});
 	});
+
+    handleNavItemsAnimation();
+    deleteAnimation();
 };
 
+const handleNavItemsAnimation = () => {
+	let delayTime = 0;
+
+	allNavItems.forEach((item) => {
+		item.classList.toggle('nav-items-animation');
+		item.style.animationDelay = '.' + delayTime + 's';
+		delayTime++;
+	});
+};
+const deleteAnimation = () => {
+	allNavItems.forEach((item) => {
+		item.addEventListener('click', () => {
+			allNavItems.forEach((el) => {
+				el.classList.remove('nav-items-animation');
+			});
+		});
+	});
+};
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
 	footerYear.innerText = year;
