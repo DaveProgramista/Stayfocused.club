@@ -1,0 +1,168 @@
+@import './reset';
+@import './colors';
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body {
+    font-size: 1.6rem;
+    font-family: 'Red Hat Display', sans-serif;
+    background: url(../img/tlo.jpeg) center top;
+    height: 200vh;
+}
+.section__tittle{
+    padding: 1em;
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Lilita One', sans-serif;
+}
+
+
+/*---------- Navigation --------*/
+.nav{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    .navbar{
+        position: absolute;
+        top: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        z-index: -1;
+        width: 100vw;
+        height: 50px;
+        font-size: 1em;
+        background-color: $main-color;
+        
+        &__link{
+            padding: 0 1em;
+            text-transform: uppercase;
+            text-decoration: none; 
+            color: $pure-white;
+            transition: .3s;
+            &:hover{
+                text-shadow: 0 0 10px $shadow-color;
+                color: $accent-white;
+                scale: 1.2;
+            }
+        }}
+        
+        .title-box{
+            position: relative;
+            height: 60px;
+            width: 100vw;
+            background-color: $shadow-color;
+            box-shadow: 0 0 10px $shadow-color;
+            &__logo{
+                position: absolute;
+                top: 20px;
+                left: 40px;
+                img{
+                    height: 80px;
+                    width: 80px;
+                    box-shadow: 0 0 10px $shadow-color;
+                }
+            }
+            &__text{
+                position: absolute;
+                top: 10px;
+                left: 130px;
+                font-family: 'Lilita One', sans-serif;
+                color: $pure-white;
+                font-size: 2em;
+            }
+        }
+    }
+    /*---------- Header --------*/
+    .header {
+        &__wrapper {
+            position: relative;
+            height: 95vh;
+            background-image: url('../img/hero.JPG');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: 0;
+        }
+    
+        &__shadow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: -10;
+        }
+    
+        &__text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            padding: 10px;
+            text-align: center;
+            z-index: 5;
+        }
+        &__heading{
+            font-size: 6em;
+            font-family: 'Lilita One', sans-serif;
+            color: $pure-white;
+        }
+        &__sentence{
+            font-size: 3em;
+            color: $pure-white;
+        }
+    }
+
+    /*---------- aboutus --------*/
+
+    .aboutus{
+        width: 100vw;
+        padding: 2em;
+        overflow: hidden;
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+        }
+        &__heading{
+            padding: 1em;
+            text-align: center;
+            font-size: 2em;
+            background-color: $main-color;
+            border-radius: 10%;
+        }
+        &__card{
+            padding: 1em;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+            &--img{
+                padding: 1em;
+                height: 220px;
+                border-radius: 25%;
+                z-index: 2;
+            }
+            &--text{
+                height: 160px;
+                position: relative;
+                padding: 1em;
+                background-color: $accent-white;
+            }
+
+            &--text::after{
+                position: absolute;
+                top: 0;
+                left: -30px;
+                width: 40px;
+                height: 160px;
+                content:"";
+                background-color: $accent-white;
+            }
+            &--two , &--four{
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    
