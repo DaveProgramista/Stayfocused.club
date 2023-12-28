@@ -6,17 +6,18 @@ html {
 }
 body {
     font-size: 1.6rem;
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
 }
 .section__tittle{
-    padding: 1em;
+    padding: .5em;
     text-align: center;
     font-size: 4em;
-    font-family: 'Lilita One', sans-serif;
+    font-weight: bold;
+    // font-family: 'Lilita One', sans-serif;
 }
-.active{
-    left: 0;
-}
+
 
 /*---------- Navigation --------*/
 
@@ -75,12 +76,12 @@ body {
 .burget-nav__box{
     position: absolute;
     top: 48px;
-    right: -1000px;
     height: 560px;
     width: 100vw;
     background-color: $main-color;
     z-index: 100;
     display: flex;
+    opacity: 0;
     flex-direction: column;
     align-items: center;
     justify-items: center;
@@ -105,6 +106,9 @@ body {
 }
 .nav-items-animation {
 	animation: navItemsAnimation 1s both;
+}
+.active{
+    opacity: 1;
 }
 
 ///desktop navigation 
@@ -149,7 +153,8 @@ body {
                 position: absolute;
                 top: 20px;
                 left: 110px;
-                font-family: 'Lilita One', sans-serif;
+                // font-family: 'Lilita One', sans-serif;
+                font-family: 'Gruppo', sans-serif;
                 color: $pure-white;
                 font-size: 1.5em;
             }
@@ -188,7 +193,7 @@ body {
         }
         &__heading{
             font-size: 2em;
-            font-family: 'Lilita One', sans-serif;
+            font-family: 'Gruppo', sans-serif;
             color: $pure-white;
         }
         &__sentence{
@@ -201,8 +206,7 @@ body {
 
     .aboutus{
         width: 100vw;
-        padding: 2em;
-        overflow: hidden;
+        padding: 1em;
         &__wrapper{
             display: flex;
             flex-direction: column;
@@ -215,40 +219,31 @@ body {
             background-color: $main-color;
             border-radius: 10%;
         }
-        &__card{
-            padding: 1em;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            
-            &--img{
-                padding: 1em;
-                height: 220px;
-                border-radius: 25%;
-                z-index: 2;
+        .aboutus__box{
+            padding: .5em;
+            .aboutus__card{
+                background-color: $main-color;
+                width: 320px;
+                border-radius: 5%;
+                margin-bottom: 1em;
+                color: $pure-white;
+                &-img{
+                    height: 320px;
+                    width: 320px;
+                    border-radius: 5%;
+                }
+                &-heading{
+                    text-align: center;
+                    font-size: 1.5em;
+                }
+                &-text{
+                    text-align: center;
+                    font-size: 1.2em;
+                    padding: .5em;
+                }
             }
-            &--text{
-                height: 160px;
-                position: relative;
-                padding: 1em;
-                background-color: $accent-white;
-            }
-
-            &--text::after{
-                position: absolute;
-                top: 0;
-                left: -30px;
-                width: 40px;
-                height: 160px;
-                content:"";
-                background-color: $accent-white;
-            }
-            &--two , &--four{
-                flex-direction: row-reverse;
-            }
-        }
-    }
-
+        }}
+ 
 
  /*---------- footer --------*/
  footer{

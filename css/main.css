@@ -13,18 +13,16 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .section__tittle {
-  padding: 1em;
+  padding: 0.5em;
   text-align: center;
   font-size: 4em;
-  font-family: "Lilita One", sans-serif;
-}
-
-.active {
-  left: 0;
+  font-weight: bold;
 }
 
 /*---------- Navigation --------*/
@@ -75,12 +73,12 @@ body {
 .burget-nav__box {
   position: absolute;
   top: 48px;
-  right: -1000px;
   height: 560px;
   width: 100vw;
-  background-color: #0f6f2a;
+  background-color: #b19e8d;
   z-index: 100;
   display: flex;
+  opacity: 0;
   flex-direction: column;
   align-items: center;
   justify-items: center;
@@ -107,6 +105,10 @@ body {
   animation: navItemsAnimation 1s both;
 }
 
+.active {
+  opacity: 1;
+}
+
 .nav {
   position: sticky;
   top: 0;
@@ -122,7 +124,7 @@ body {
   width: 100vw;
   height: 50px;
   font-size: 1em;
-  background-color: #0f6f2a;
+  background-color: #b19e8d;
 }
 .nav .navbar__link {
   display: none;
@@ -148,7 +150,7 @@ body {
   position: absolute;
   top: 20px;
   left: 110px;
-  font-family: "Lilita One", sans-serif;
+  font-family: "Gruppo", sans-serif;
   color: #ffffff;
   font-size: 1.5em;
 }
@@ -183,7 +185,7 @@ body {
 }
 .header__heading {
   font-size: 2em;
-  font-family: "Lilita One", sans-serif;
+  font-family: "Gruppo", sans-serif;
   color: #ffffff;
 }
 .header__sentence {
@@ -194,8 +196,7 @@ body {
 /*---------- aboutus --------*/
 .aboutus {
   width: 100vw;
-  padding: 2em;
-  overflow: hidden;
+  padding: 1em;
 }
 .aboutus__wrapper {
   display: flex;
@@ -206,38 +207,32 @@ body {
   padding: 1em;
   text-align: center;
   font-size: 2em;
-  background-color: #0f6f2a;
+  background-color: #b19e8d;
   border-radius: 10%;
 }
-.aboutus__card {
-  padding: 1em;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.aboutus .aboutus__box {
+  padding: 0.5em;
 }
-.aboutus__card--img {
-  padding: 1em;
-  height: 220px;
-  border-radius: 25%;
-  z-index: 2;
+.aboutus .aboutus__box .aboutus__card {
+  background-color: #b19e8d;
+  width: 320px;
+  border-radius: 5%;
+  margin-bottom: 1em;
+  color: #ffffff;
 }
-.aboutus__card--text {
-  height: 160px;
-  position: relative;
-  padding: 1em;
-  background-color: #d8d6d6;
+.aboutus .aboutus__box .aboutus__card-img {
+  height: 320px;
+  width: 320px;
+  border-radius: 5%;
 }
-.aboutus__card--text::after {
-  position: absolute;
-  top: 0;
-  left: -30px;
-  width: 40px;
-  height: 160px;
-  content: "";
-  background-color: #d8d6d6;
+.aboutus .aboutus__box .aboutus__card-heading {
+  text-align: center;
+  font-size: 1.5em;
 }
-.aboutus__card--two, .aboutus__card--four {
-  flex-direction: row-reverse;
+.aboutus .aboutus__box .aboutus__card-text {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0.5em;
 }
 
 /*---------- footer --------*/
@@ -245,7 +240,7 @@ footer {
   text-align: center;
   height: 50px;
   width: 100vw;
-  background-color: #0f6f2a;
+  background-color: #b19e8d;
 }
 footer .footer__bottom-text {
   color: #ffffff;
