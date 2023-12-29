@@ -5,23 +5,27 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-    font-size: 1.6rem;
-    font-family: 'Roboto', sans-serif;
-    width: 100vw;
-    overflow-x: hidden;
+	font-size: 1.6rem;
+	font-family: 'Roboto', sans-serif;
+	width: 100vw;
+	overflow-x: hidden;
 }
-.section__tittle{
-    padding: .5em;
-    text-align: center;
-    font-size: 4em;
-    font-weight: bold;
-    // font-family: 'Lilita One', sans-serif;
+.section__tittle {
+	padding: 0.5em;
+	text-align: center;
+	font-size: 4em;
+	font-weight: bold;
+	// font-family: 'Lilita One', sans-serif;
 }
-
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
 
 /*---------- Navigation --------*/
 
-///mobile navigation 
+///mobile navigation
 
 .burger-btn {
 	position: fixed;
@@ -52,12 +56,12 @@ body {
 	&__bars,
 	&__bars::after,
 	&__bars::before {
-        position: absolute;
-        right: 0;
-        height: 3px;
-        content: '';
-        background-color: $pure-white;
-        transition: width .3s;
+		position: absolute;
+		right: 0;
+		height: 3px;
+		content: '';
+		background-color: $pure-white;
+		transition: width 0.3s;
 	}
 	&__bars {
 		width: 100%;
@@ -73,28 +77,27 @@ body {
 		}
 	}
 }
-.burget-nav__box{
-    position: absolute;
-    top: 48px;
-    height: 560px;
-    width: 100vw;
-    background-color: $main-color;
-    z-index: 100;
-    display: flex;
-    opacity: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    &--link{
-        text-align: center;
-        width: 100vw;
-        height: 60px;
-        padding: 1em;
-        text-decoration: none;
-        color: $pure-white;
-        font-size: 2.5em;
-    }
-
+.burget-nav__box {
+	position: absolute;
+	top: 48px;
+	height: 560px;
+	width: 100vw;
+	background-color: $main-color;
+	z-index: 100;
+	display: flex;
+	opacity: 0;
+	flex-direction: column;
+	align-items: center;
+	justify-items: center;
+	&--link {
+		text-align: center;
+		width: 100vw;
+		height: 60px;
+		padding: 1em;
+		text-decoration: none;
+		color: $pure-white;
+		font-size: 2.5em;
+	}
 }
 @keyframes navItemsAnimation {
 	from {
@@ -107,189 +110,188 @@ body {
 .nav-items-animation {
 	animation: navItemsAnimation 1s both;
 }
-.active{
-    opacity: 1;
+.active {
+	opacity: 1;
 }
 
-///desktop navigation 
+///desktop navigation
 
-.nav{
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    .navbar{
-        position: absolute;
-        top: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        z-index: -1;
-        width:100vw;
-        height: 50px;
-        font-size: 1em;
-        background-color: $main-color;
-        
-        &__link{
-            display: none;
-        }
-    }
-        .title-box{
-            position: relative;
-            height: 60px;
-            width: 100vw;
-            background-color: $shadow-color;
-            box-shadow: 0 0 10px $shadow-color;
-            &__logo{
-                position: absolute;
-                top: 20px;
-                left: 20px;
-                img{
-                    height: 80px;
-                    width: 80px;
-                    box-shadow: 0 0 10px $shadow-color;
-                }
-            }
-            &__text{
-                position: absolute;
-                top: 20px;
-                left: 110px;
-                // font-family: 'Lilita One', sans-serif;
-                font-family: 'Gruppo', sans-serif;
-                color: $pure-white;
-                font-size: 1.5em;
-            }
-        }
-    }
-    /*---------- Header --------*/
-    .header {
-        &__wrapper {
-            position: relative;
-            height: 92vh;
-            width: 100vw;
-            background-image: url('../img/hero.JPG');
-            background-position: center;
-            background-size: cover;
-            background-attachment: fixed;
-            z-index: 0;
-        }
-    
-        &__shadow {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: -10;
-        }
-    
-        &__text {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100%;
-            padding: 1em;
-            text-align: center;
-            z-index: 5;
-        }
-        &__heading{
-            font-size: 2em;
-            font-family: 'Gruppo', sans-serif;
-            color: $pure-white;
-        }
-        &__sentence{
-            font-size: 1em;
-            color: $pure-white;
-        }
-    }
+.nav {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	.navbar {
+		position: absolute;
+		top: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		z-index: -1;
+		width: 100vw;
+		height: 50px;
+		font-size: 1em;
+		background-color: $main-color;
 
-    /*---------- aboutus --------*/
-    .offers {
-        position: relative;
-        overflow: hidden;
-    
-    
-        &__option {
-            margin: 1em 0;
-            box-shadow: 5px 5px 10px #2e2e2e2e;
-            background-color: $main-color;
-            overflow: hidden;
-    
-            &-img {
-                width: 100%;
-                transition: transform 0.3s;
-                &:hover {
-                    transform: scale(1.1);
-                }
-            }
-            &-info {
-                padding: 2em;
-                background-color: $pure-white;
-                z-index: 10;
-            }
-            &-heading {
-                color: $pure-white;
-                margin-bottom: 0.5em;
-                font-size: 2.4rem;
-                font-weight: 300;
-            }
-            &-text {
-                margin-bottom: 0.5em;
-                font-size: 1.3em;
-                color: $dark;
-            }
-        }
-    }
+		&__link {
+			display: none;
+		}
+	}
+	.title-box {
+		position: relative;
+		height: 60px;
+		width: 100vw;
+		background-color: $shadow-color;
+		box-shadow: 0 0 10px $shadow-color;
+		&__logo {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			img {
+				height: 80px;
+				width: 80px;
+				box-shadow: 0 0 10px $shadow-color;
+			}
+		}
+		&__text {
+			position: absolute;
+			top: 20px;
+			left: 110px;
+			font-family: 'Gruppo', sans-serif;
+			color: $pure-white;
+			font-size: 1.5em;
+		}
+	}
+}
+/*---------- Header --------*/
+.header {
+	&__wrapper {
+		position: relative;
+		height: 92vh;
+		width: 100vw;
+		background-image: url('../img/hero.JPG');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
 
- /*---------- footer --------*/
- footer{
-    text-align: center;
-    height: 50px;
-    width: 100vw;
-    background-color: $main-color;
-    .footer__bottom-text{
-        color: $pure-white;
-        padding-top: 15px;
-    }
- }
+	&__shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -10;
+	}
+
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		padding: 1em;
+		text-align: center;
+		z-index: 5;
+	}
+	&__heading {
+		font-size: 2em;
+		font-family: 'Gruppo', sans-serif;
+		color: $pure-white;
+	}
+	&__sentence {
+		font-size: 1em;
+		color: $pure-white;
+	}
+}
+
+/*---------- aboutus --------*/
+.offers {
+	position: relative;
+	overflow: hidden;
+
+
+
+	&__option {
+		margin: 1em 0;
+		box-shadow: 5px 5px 10px #2e2e2e2e;
+		background-color: $main-color;
+		overflow: hidden;
+
+		&-img {
+			width: 100%;
+			transition: transform 0.3s;
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+		&-info {
+			padding: 2em;
+			background-color: $pure-white;
+			z-index: 10;
+		}
+		&-heading {
+			margin-bottom: 0.5em;
+			font-size: 2.4rem;
+			font-weight: 300;
+		}
+		&-text {
+			margin-bottom: 0.5em;
+			font-size: 1.3em;
+			color: $dark;
+		}
+	}
+}
+
+/*---------- footer --------*/
+footer {
+	text-align: center;
+	height: 50px;
+	width: 100vw;
+	background-color: $main-color;
+	.footer__bottom-text {
+		color: $pure-white;
+		padding-top: 15px;
+	}
+}
 
 //=========================
 // MEDIA
 //=========================
 
-@media (min-width: 576px){
+@media (min-width: 576px) {
+	//navigation
 
-    //navigation
-
-    .burger-btn{
-        display: none;
-    }
-    .burget-nav__box{
-        display: none;
-    }
-    .nav{
-    .navbar{
-        &__link{
-            display: block;
-            padding: 0 .5em;
-            text-transform: uppercase;
-            text-decoration: none; 
-            font-size: 1.2em;
-            color: $pure-white;
-            transition: .3s;
-            &:hover{
-                color: $accent-white;
-                scale: 1.2;
-            }
-        }
-    }}
-    //aboutus
+	.burger-btn {
+		display: none;
+	}
+	.burget-nav__box {
+		display: none;
+	}
+	.nav {
+		.navbar {
+			&__link {
+				display: block;
+				padding: 0 0.5em;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-size: 1.2em;
+				color: $pure-white;
+				transition: 0.3s;
+				&:hover {
+					color: $accent-white;
+					scale: 1.2;
+				}
+			}
+		}
+	}
+	//aboutus
 	.offers {
 		&__option {
 			display: flex;
 			margin: 2em 0;
 			width: 100%;
 			&-img {
-				// width: 50%;
+				width: 10%;
 				&--right {
 					order: 1;
 				}
@@ -308,8 +310,4 @@ body {
 			}
 		}
 	}
-
 }
-
-    
-
