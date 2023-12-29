@@ -203,47 +203,42 @@ body {
     }
 
     /*---------- aboutus --------*/
-
-    .aboutus{
-        width: 100vw;
-        padding: 1em;
-        &__wrapper{
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        &__heading{
-            padding: 1em;
-            text-align: center;
-            font-size: 2em;
+    .offers {
+        position: relative;
+        overflow: hidden;
+    
+    
+        &__option {
+            margin: 1em 0;
+            box-shadow: 5px 5px 10px #2e2e2e2e;
             background-color: $main-color;
-            border-radius: 10%;
-        }
-        .aboutus__box{
-            padding: .5em;
-            .aboutus__card{
-                background-color: $main-color;
-                width: 320px;
-                border-radius: 5%;
-                margin-bottom: 1em;
-                color: $pure-white;
-                &-img{
-                    height: 320px;
-                    width: 320px;
-                    border-radius: 5%;
-                }
-                &-heading{
-                    text-align: center;
-                    font-size: 1.5em;
-                }
-                &-text{
-                    text-align: center;
-                    font-size: 1.2em;
-                    padding: .5em;
+            overflow: hidden;
+    
+            &-img {
+                width: 100%;
+                transition: transform 0.3s;
+                &:hover {
+                    transform: scale(1.1);
                 }
             }
-        }}
- 
+            &-info {
+                padding: 2em;
+                background-color: $pure-white;
+                z-index: 10;
+            }
+            &-heading {
+                color: $pure-white;
+                margin-bottom: 0.5em;
+                font-size: 2.4rem;
+                font-weight: 300;
+            }
+            &-text {
+                margin-bottom: 0.5em;
+                font-size: 1.3em;
+                color: $dark;
+            }
+        }
+    }
 
  /*---------- footer --------*/
  footer{
@@ -278,14 +273,43 @@ body {
             padding: 0 .5em;
             text-transform: uppercase;
             text-decoration: none; 
+            font-size: 1.2em;
             color: $pure-white;
             transition: .3s;
             &:hover{
-                text-shadow: 0 0 10px $shadow-color;
                 color: $accent-white;
                 scale: 1.2;
             }
         }
     }}
+    //aboutus
+	.offers {
+		&__option {
+			display: flex;
+			margin: 2em 0;
+			width: 100%;
+			&-img {
+				// width: 50%;
+				&--right {
+					order: 1;
+				}
+			}
+			&-info {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			&-heading {
+				margin-bottom: 0.5em;
+				font-size: 3.6rem;
+			}
+			&-btn {
+				padding: 1em;
+			}
+		}
+	}
+
 }
+
     
+
