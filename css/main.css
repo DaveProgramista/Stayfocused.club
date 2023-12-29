@@ -25,6 +25,12 @@ body {
   font-weight: bold;
 }
 
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
 /*---------- Navigation --------*/
 .burger-btn {
   position: fixed;
@@ -194,34 +200,36 @@ body {
 }
 
 /*---------- aboutus --------*/
-.offers {
+.aboutus {
   position: relative;
   overflow: hidden;
 }
-.offers__option {
+.aboutus__card {
   margin: 1em 0;
   box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.1803921569);
   background-color: #b19e8d;
   overflow: hidden;
 }
-.offers__option-img {
+.aboutus__card-img {
   width: 100%;
   transition: transform 0.3s;
 }
-.offers__option-img:hover {
+.aboutus__card-img:hover {
   transform: scale(1.1);
 }
-.offers__option-info {
+.aboutus__card-info {
   padding: 2em;
   background-color: #b19e8d;
   z-index: 10;
 }
-.offers__option-heading {
+.aboutus__card-heading {
   margin-bottom: 0.5em;
-  font-size: 2.4rem;
+  text-align: center;
+  color: #ffffff;
+  font-size: 3.4rem;
   font-weight: 300;
 }
-.offers__option-text {
+.aboutus__card-text {
   margin-bottom: 0.5em;
   font-size: 1.3em;
   color: #ffffff;
@@ -259,28 +267,36 @@ footer .footer__bottom-text {
     color: #d8d6d6;
     scale: 1.2;
   }
-  .offers__option {
+  .aboutus__card {
     display: flex;
     margin: 2em 0;
     width: 100%;
   }
-  .offers__option-img {
-    width: 50%;
-    height: auto;
+  .aboutus__card-img {
+    width: 30%;
   }
-  .offers__option-img--right {
+  .aboutus__card-img--right {
     order: 1;
   }
-  .offers__option-info {
+  .aboutus__card-info {
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  .offers__option-heading {
+  .aboutus__card-heading {
     margin-bottom: 0.5em;
     font-size: 3.6rem;
   }
-  .offers__option-btn {
+  .aboutus__card-btn {
     padding: 1em;
+  }
+}
+@media (min-width: 992px) {
+  .aboutus__card-img {
+    width: 20%;
+  }
+  .aboutus__card-info {
+    width: 80%;
   }
 }/*# sourceMappingURL=main.css.map */

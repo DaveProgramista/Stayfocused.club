@@ -205,13 +205,11 @@ body {
 }
 
 /*---------- aboutus --------*/
-.offers {
+.aboutus {
 	position: relative;
 	overflow: hidden;
 
-
-
-	&__option {
+	&__card {
 		margin: 1em 0;
 		box-shadow: 5px 5px 10px #2e2e2e2e;
 		background-color: $main-color;
@@ -226,18 +224,20 @@ body {
 		}
 		&-info {
 			padding: 2em;
-			background-color: $pure-white;
+			background-color: $main-color;
 			z-index: 10;
 		}
 		&-heading {
 			margin-bottom: 0.5em;
-			font-size: 2.4rem;
+			text-align: center;
+			color: $pure-white;
+			font-size: 3.4rem;
 			font-weight: 300;
 		}
 		&-text {
 			margin-bottom: 0.5em;
 			font-size: 1.3em;
-			color: $dark;
+			color: $pure-white;
 		}
 	}
 }
@@ -285,18 +285,19 @@ footer {
 		}
 	}
 	//aboutus
-	.offers {
-		&__option {
+	.aboutus {
+		&__card {
 			display: flex;
 			margin: 2em 0;
 			width: 100%;
 			&-img {
-				width: 10%;
+				width: 30%;
 				&--right {
 					order: 1;
 				}
 			}
 			&-info {
+				width: 70%;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
@@ -311,3 +312,17 @@ footer {
 		}
 	}
 }
+@media (min-width: 992px){
+	//aboutus
+	.aboutus {
+		&__card {
+			&-img {
+				width: 20%;
+			}
+			&-info {
+				width: 80%;
+			}
+		}
+	}
+}	
+
