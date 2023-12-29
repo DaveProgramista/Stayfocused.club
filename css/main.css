@@ -210,6 +210,15 @@ body {
   background-color: #b19e8d;
   overflow: hidden;
 }
+.aboutus__card-main {
+  text-align: center;
+  padding: 1em;
+  background-color: #b19e8d;
+  width: 100%;
+}
+.aboutus__card-main-heading {
+  font-family: "Gruppo", sans-serif;
+}
 .aboutus__card-img {
   width: 100%;
   transition: transform 0.3s;
@@ -233,6 +242,109 @@ body {
   margin-bottom: 0.5em;
   font-size: 1.3em;
   color: #ffffff;
+}
+
+.projects__card {
+  position: relative;
+  margin: 1em 0;
+  height: 450px;
+  color: #ffffff;
+  text-align: center;
+  perspective: 1000px;
+}
+.projects__card:hover .projects__card-img {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+.projects__card:hover .projects__card-info {
+  transform: rotateY(0);
+  opacity: 1;
+}
+.projects__card-img {
+  padding: 2em;
+  height: 100%;
+  border-radius: 8px;
+  background-size: cover;
+  transition: transform 1s, opacity 1s;
+}
+.projects__card-img--first {
+  background-image: linear-gradient(45deg, rgba(83, 83, 83, 0.75), rgba(47, 47, 47, 0.55)), url("../img/kamil/IMG_2114.JPG");
+}
+.projects__card-img--second {
+  background-image: linear-gradient(45deg, rgba(83, 83, 83, 0.75), rgba(47, 47, 47, 0.55)), url("../img/kamil/mx-5.JPG");
+}
+.projects__card-img--third {
+  background-image: linear-gradient(45deg, rgba(83, 83, 83, 0.75), rgba(47, 47, 47, 0.55)), url("../img/kamil/lex-kamil.jpg");
+}
+.projects__card-img--fourth {
+  background-image: linear-gradient(45deg, rgba(83, 83, 83, 0.75), rgba(47, 47, 47, 0.55)), url("../img/kielek/gs.JPG");
+}
+.projects__card-img--fifth {
+  background-image: linear-gradient(45deg, rgba(83, 83, 83, 0.75), rgba(47, 47, 47, 0.55)), url("../img/kielek/accord.jpg");
+}
+.projects__card-img--sixth {
+  background-image: linear-gradient(45deg, rgba(83, 83, 83, 0.75), rgba(47, 47, 47, 0.55)), url("../img/qbu/eclipse.jpg");
+}
+.projects__card-img--seventh {
+  background-image: linear-gradient(45deg, rgba(83, 83, 83, 0.75), rgba(47, 47, 47, 0.55)), url("../img/qbu/e46.jpg");
+}
+.projects__card-img--eight {
+  background-image: linear-gradient(45deg, rgba(83, 83, 83, 0.75), rgba(47, 47, 47, 0.55)), url("../img/szymcio/IMG_2115.JPG");
+}
+.projects__card-img--nine {
+  background-image: linear-gradient(45deg, rgba(83, 83, 83, 0.75), rgba(47, 47, 47, 0.55)), url("../img/dave/iesik.jpg");
+}
+.projects__card-img--ten {
+  background-image: linear-gradient(45deg, rgba(83, 83, 83, 0.75), rgba(47, 47, 47, 0.55)), url("../img/dave/civic.jpg");
+}
+.projects__card-img-title {
+  font-family: "Gruppo", sans-serif;
+  font-size: 2.8rem;
+}
+.projects__card-img-info {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 1.8rem;
+}
+.projects__card-img-info i {
+  margin-right: 0.3em;
+}
+.projects__card-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(45deg, rgb(83, 83, 83), rgb(83, 83, 83));
+  border-radius: 8px;
+  opacity: 0;
+  transform: rotateY(180deg);
+  transition: transform 1s, opacity 1s;
+}
+.projects__card-info-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1.2em;
+  font-family: "Gruppo", sans-serif;
+  font-size: 2.8rem;
+}
+.projects__card-info-list {
+  margin: 0 auto;
+  width: 70%;
+  list-style: none;
+}
+.projects__card-info-list-item {
+  padding: 1em;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #ffffff;
+}
+.projects__card-info-list-item:last-child {
+  border-bottom: none;
 }
 
 /*---------- footer --------*/
@@ -291,12 +403,26 @@ footer .footer__bottom-text {
   .aboutus__card-btn {
     padding: 1em;
   }
+  .projects__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .projects__card {
+    margin: 1em;
+    width: 45%;
+  }
 }
 @media (min-width: 992px) {
   .aboutus__card-img {
-    width: 20%;
+    width: 40%;
   }
   .aboutus__card-info {
     width: 80%;
+  }
+}
+@media (min-width: 1100px) {
+  .projects__card {
+    width: 40%;
   }
 }/*# sourceMappingURL=main.css.map */

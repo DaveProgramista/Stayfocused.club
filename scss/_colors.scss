@@ -2,3 +2,6 @@ $main-color : #b19e8d ;
 $shadow-color: rgb(15, 15, 15); 
 $pure-white : #ffffff;
 $accent-white : #d8d6d6;
+
+$light-grey-gradient: linear-gradient(45deg, rgba(83, 83, 83, 0.75), rgba(47, 47, 47, 0.55));
+$grey-gradient-solid: linear-gradient(45deg, rgb(83, 83, 83), rgb(83, 83, 83));
