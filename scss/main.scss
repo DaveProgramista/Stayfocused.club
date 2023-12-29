@@ -15,12 +15,18 @@ body {
 	text-align: center;
 	font-size: 4em;
 	font-weight: bold;
-	// font-family: 'Lilita One', sans-serif;
+	font-family: 'Gruppo', sans-serif;
 }
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1200px;
+}
+.main-color-section{
+	background-color: $accent-white;
+}
+.section{
+	scroll-margin-top: 100px;
 }
 
 /*---------- Navigation --------*/
